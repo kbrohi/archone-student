@@ -15,6 +15,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { StudentsEffects } from './store/effects/students.effects';
+import { ImportResponseComponent } from './import-response/import-response.component';
 
 @NgModule({
   declarations: [
@@ -23,13 +24,15 @@ import { StudentsEffects } from './store/effects/students.effects';
     DashboardComponent,
     ImportPopupComponent,
     HeaderComponent,
+    ImportResponseComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     StoreModule.forRoot(reducers, {
-      metaReducers, 
+      metaReducers,
       runtimeChecks: {
         strictStateImmutability: true,
         strictActionImmutability: true,

@@ -1,9 +1,15 @@
 <div class="container-fluid">
-    <div class="container-popup">
+    <div *ngIf="popup==='yes'">
+        <app-import-response [users]="notInserted"></app-import-response>
+    </div>
+    <div *ngIf="popup==='no'"
+        class="container-popup">
         <!-- {/* popup */} -->
+
         <div class="mainDiv-of-popup">
+
             <div class="cross-img cursor-pointer">
-                <img src='../../assets/images/false.png' (click)="close()" />
+                <img src='../../assets/images/false.png' (click)="close()"/>
             </div>
             <!-- {/* import file heading */} -->
             <div class="import-heading fnt-family-sans">
@@ -15,10 +21,9 @@
                     <div class="input-upload-file">
                         <div class="input-container">
                             <label>{{fileName?fileName:"Choose File"}}
-                                <input required id="myInput" type="file" accept=".csv"
-                                    (change)="csv2Array($event.target.files)" />
+                                <input required id="myInput" type="file" accept=".csv" (change)="csv2Array($event.target.files)"/>
                                 <div class="file-icon">
-                                    <img src="../../assets/images/attach.png" height="25px" alt="" />
+                                    <img src="../../assets/images/attach.png" height="25px" alt=""/>
                                 </div>
                             </label>
                         </div>
@@ -29,7 +34,7 @@
                             <label>Add School Name</label>
                         </div>
                         <div class="input-container popup-second-div-inpus-label">
-                            <input required id="myInput" (keyup)="setPreviousSchool($event.target.value)" />
+                            <input required id="myInput" (keyup)="setPreviousSchool($event.target.value)"/>
                         </div>
                     </div>
                     <div class="buttons">

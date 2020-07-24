@@ -8,8 +8,9 @@ import { Router } from "@angular/router";
 export class ImportPopupComponent implements OnInit {
   studentsRecord = []
   previousSchool = ""
-  notInserted = ""
+  notInserted
   fileName=""
+  popup="no"
   constructor(private router: Router, private apisService: ApisService) { }
 
   ngOnInit(): void {
@@ -58,8 +59,10 @@ export class ImportPopupComponent implements OnInit {
     })
     this.apisService.importSchoolData(this.studentsRecord).then(res => {
       this.notInserted = res.data.error;
-      window.alert("All students inserted successfully"+(this.notInserted?" except "+this.notInserted:""));
-      this.router.navigateByUrl('')
+      this.notInserted = this.notInserted.split(',')
+      this.popup='yes'
+      // window.alert("All students inserted successfully"+(this.notInserted?" except "+this.notInserted:""));
+      // this.router.navigateByUrl('')
     })
   }
 }

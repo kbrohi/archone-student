@@ -4,7 +4,7 @@
       <div class="popup-mainDiv">
           <!-- close image -->
           <div class="dataPopup-img">
-              <img src='../../assets/images/false.png' class="cursor-pointer" />
+              <img src='../../assets/images/false.png' class="cursor-pointer" (click)="close()"/>
           </div>
           <!-- heading -->
           <div class="heading-dataPopup fnt-family-sans">
@@ -17,22 +17,15 @@
                   <h6>Students data already exist.</h6>
               </div>
               <div class="list-of-data-mainDiv">
+               
                   <ul>
-                      <li class="fnt-family-sans">Name</li>
-                      <li class="fnt-family-sans">Name</li>
-                      <li class="fnt-family-sans">Name</li>
-                      <li class="fnt-family-sans">Name</li>
-                      <li class="fnt-family-sans">Name</li>
-                      <li class="fnt-family-sans">Name</li>
-                      <li class="fnt-family-sans">Name</li>
-                      <li class="fnt-family-sans">Name</li>
-                      <li class="fnt-family-sans">Name</li>
+                    <li *ngFor="let user of newusers" class="fnt-family-sans">{{user}}</li>
                   </ul>
               </div>
               <!-- buttons -->
               <div class="importedButton-MainDiv">
                   <div class="button-PopupWidth">
-                      <Button class="loginButton buttonColor cursor-pointer btn-red fnt-family-sans">Close</Button>
+                      <Button class="loginButton buttonColor cursor-pointer btn-red fnt-family-sans" (click)="close()">Close</Button>
                   </div>
               </div>
           </div>
