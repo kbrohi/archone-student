@@ -14,7 +14,7 @@
                 <div class="inside-form-tag">
                     <div class="input-upload-file">
                         <div class="input-container">
-                            <label>Choose File
+                            <label>{{fileName?fileName:"Choose File"}}
                                 <input required id="myInput" type="file" accept=".csv"
                                     (change)="csv2Array($event.target.files)" />
                                 <div class="file-icon">
@@ -29,7 +29,7 @@
                             <label>Add School Name</label>
                         </div>
                         <div class="input-container popup-second-div-inpus-label">
-                            <input required id="myInput" (change)="csv2Array($event.target.files)" />
+                            <input required id="myInput" (keyup)="setPreviousSchool($event.target.value)" />
                         </div>
                     </div>
                     <div class="buttons">

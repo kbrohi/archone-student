@@ -3,6 +3,7 @@
 
 <div class="container-fluid">
     <div class="dataEntry-container">
+      {{students}}
         <!-- {/* data entry heading portion */} -->
         <div class="dataEntry-header">
             <!-- {/* left side portion */} -->
@@ -11,8 +12,8 @@
                     <h5>Welcome!</h5>
                 </div>
                 <div class="schoolName-Date fnt-family-sans">
-                    <h5>School Name</h5>
-                    <h6>06/25/2020</h6>
+                    <h5>School X</h5>
+                    <h6></h6>
                 </div>
             </div>
             <!-- {/* right side data */} -->
@@ -90,7 +91,7 @@
                     <!-- list of data  starts from here-->
                     <ul class="d-flex-main-list">
                         <ul>
-                            <li class="body-Li-Image" (click)='setEditUserId(record.studentId)'><img
+                            <li class="body-Li-Image" (click)='setEditUserId(record.studentId, record)'><img
                                     src="../../assets/images/tableDropdown.png" width="16px" /></li>
                         </ul>
                         <ul class="width-10">
@@ -110,36 +111,36 @@
                         </ul>
                         <ul class="data-of-content buttonMarginLEft width-20">
                             <li class="buttons-of-body">
-                                <button class="commonButton border-black-button fnt-family-sans">Delete</button>
+                                <button class="commonButton border-black-button fnt-family-sans" (click)="delete(record.studentId)">Delete</button>
                                 <button class="commonButton border-red-button mrg-left-10 fnt-family-sans"
                                     *ngIf="editStudentId!=record.studentId"
-                                    (click)='setEditUserId(record.studentId)'>Edit</button>
+                                    (click)='setEditUserId(record.studentId, record)'>Edit</button>
                                 <button class="commonButton border-red-button mrg-left-10 fnt-family-sans"
-                                    *ngIf="editStudentId==record.studentId">Save</button>
+                                    *ngIf="editStudentId==record.studentId" (click)="update()">Update</button>
                             </li>
                         </ul>
                     </ul>
                     <!-- {/* dayta entry form */} -->
                     <div class="form-of-dataEntry" *ngIf="checkId(record.studentId)">
-                        <form>
+                        <form #updateRecord="ngForm">
                             <!-- {/* row 1 name , date of birth , gender */} -->
                             <div class="row-of-form">
                                 <!-- {/* name */} -->
                                 <div class="label-And-input">
                                     <label>Name</label>
-                                    <input class="input-of-dataEntry" value={{record.name}} placeholder="" />
+                                    <input class="input-of-dataEntry" value={{editRecord.name}} (keyup)="changeField('name',$event.target.value)"  name="name" placeholder="" />
                                 </div>
                                 <!-- {/* Date of birth */} -->
                                 <div class="label-And-input">
                                     <label>Date Of Birth</label>
-                                    <input class="input-of-dataEntry" value={{record.dob}} placeholder="" />
+                                    <input class="input-of-dataEntry" value={{editRecord.dob}} (keyup)="changeField('dob',$event.target.value)"  name="dob" placeholder="" />
                                 </div>
                                 <!-- {/* name */} -->
                                 <div class="label-And-input">
                                     <label>Gender</label>
-                                    <select value={{record.gender}} class="select-of-dataEntry">
+                                    <select value={{editRecord.gender}} name="gender" (keyup)="changeField('gender',$event.target.value)" class="select-of-dataEntry">
                                         <option>Select Gender</option>
-                                        <option vale="Male">Male</option>
+                                        <option value="Male">Male</option>
                                         <option value="Female">Female</option>
                                     </select>
                                 </div>
@@ -149,17 +150,17 @@
                                 <!-- {/* Address */} -->
                                 <div class="label-And-input">
                                     <label>Address</label>
-                                    <input class="input-of-dataEntry" value={{record.address}} placeholder="" />
+                                    <input class="input-of-dataEntry" value={{editRecord.address}} (keyup)="changeField('address',$event.target.value)" name="address"  placeholder="" />
                                 </div>
                                 <!-- {/* State */} -->
                                 <div class="label-And-input">
                                     <label>State</label>
-                                    <input class="input-of-dataEntry" value={{record.state}} placeholder="" />
+                                    <input class="input-of-dataEntry" value={{editRecord.state}} (keyup)="changeField('state',$event.target.value)" name="state" placeholder="" />
                                 </div>
                                 <!-- {/* Grade*/} -->
                                 <div class="label-And-input">
                                     <label>Grade</label>
-                                    <input class="input-of-dataEntry" value={{record.grade}} placeholder="" />
+                                    <input class="input-of-dataEntry" value={{editRecord.grade}} (keyup)="changeField('grade',$event.target.value)" name="grade" placeholder="" />
                                 </div>
                             </div>
                             <!-- {/* third row  Teacher Name */} -->
@@ -167,9 +168,19 @@
                                 <!-- {/* Teacher Name */} -->
                                 <div class="label-And-input">
                                     <label>Teacher Name</label>
-                                    <input class="last-input-of-dataEntry" value={{record.teacherName}}
+                                    <input class="input-of-dataEntry" value={{editRecord.teacherName}} (keyup)="changeField('teacherName',$event.target.value)" name="teacherName"
                                         placeholder="" />
                                 </div>
+                                <div class="label-And-input">
+                                  <label>Previous School</label>
+                                  <input class="input-of-dataEntry" value={{editRecord.previousSchool}} (keyup)="changeField('previousSchool',$event.target.value)" name="teacherName"
+                                      placeholder="" />
+                              </div>
+                              <div class="label-And-input">
+                                <label>Current School</label>
+                                <input class="input-of-dataEntry" value={{editRecord.currentSchool}} (keyup)="changeField('currentSchool',$event.target.value)" name="teacherName"
+                                    placeholder="" />
+                            </div>
                             </div>
                         </form>
                     </div>

@@ -9,6 +9,7 @@ export class ImportPopupComponent implements OnInit {
   studentsRecord = []
   previousSchool = ""
   notInserted = ""
+  fileName=""
   constructor(private router: Router, private apisService: ApisService) { }
 
   ngOnInit(): void {
@@ -17,12 +18,13 @@ export class ImportPopupComponent implements OnInit {
     this.router.navigateByUrl('')
   }
   setPreviousSchool(event) {
+    console.log(event)
     this.previousSchool = event
   }
   csv2Array(fileInput: FileList) {
     //read file from input
     const fileReaded = fileInput[0];
-
+    this.fileName = fileReaded.name;
     let reader: FileReader = new FileReader();
     reader.readAsText(fileReaded);
 
@@ -51,10 +53,11 @@ export class ImportPopupComponent implements OnInit {
   import() {
     this.studentsRecord = this.studentsRecord.map((single) => {
       single.previousSchool = this.previousSchool;
+      single.currentSchool = "School X"
       return single;
     })
     this.apisService.importSchoolData(this.studentsRecord).then(res => {
-      this.notInserted = res.data.webkitfullscreenerror;
+      this.notInserted = res.data.error;
       window.alert("All students inserted successfully"+(this.notInserted?" except "+this.notInserted:""));
       this.router.navigateByUrl('')
     })

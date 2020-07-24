@@ -374,6 +374,7 @@ padding-top: 4px;
   font-size: 16px;
   font-weight: normal;
   color: #767573;
+  border-radius: 4px;
   border: 1px solid #DAD8D5;
 }
 .dataEntry-header .leftSide-inputs-buttons .select-and-headerDiv{
@@ -453,10 +454,10 @@ color: #212120;
   border-bottom: 1px solid #DAD8D5;
   border-right: 1px solid #DAD8D5;
 }
-.tableBody .body-ImgAndData ul .body-Li-Image{
+/* .tableBody .body-ImgAndData ul .body-Li-Image{
   padding: 15px 15px 10px 16px;
-  border: 1px solid #DAD8D5;
-}
+  border-left: 1px solid #DAD8D5;
+} */
 .tableBody .body-ImgAndData ul .studentId{
   padding: 12px 0px 0px 27px;
   font-size: 16px;
@@ -525,6 +526,7 @@ color: #212120;
 /* data entry */
 .d-flex-main-list{
   display: flex;
+  border: 1px solid #DAD8D5;
 }
 .dataEntry-container{
   padding-left: 50px;
@@ -577,6 +579,7 @@ padding-top: 4px;
 .dataEntry-header .leftSide-inputs-buttons .inputHeader-section{
       padding: 1px 30px 0px 10px;
       width: 270px;
+      border-radius: 4px;
       margin: 0px 0px 0px 10px;
       border: 1px solid #DAD8D5;
       color: #767573;
@@ -659,7 +662,7 @@ color: #212120;
 }
 .tableBody .body-ImgAndData ul .body-Li-Image{
   padding: 15px 15px 10px 19px;
-  border: 1px solid #DAD8D5;
+  border-right: 1px solid #DAD8D5;
 }
 .tableBody .body-ImgAndData ul .studentId{
   padding: 12px 0px 0px 27px;
@@ -867,6 +870,73 @@ color: #FFFFFF;
   border-radius: 2px;
 }
 
-
+/* impore response page css */
+.data-imported-popup{
+  display: flex;
+  justify-content: center;
+}
+.data-imported-popup .popup-mainDiv{
+  width: 50%;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.09);
+  background-color: #ffffff;
+  margin: 40px 0px 40px 0px;
+}
+.data-imported-popup .popup-mainDiv .dataPopup-img{
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 20px 10px 0px;
+}
+.data-imported-popup .popup-mainDiv .heading-dataPopup h5{
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  color: #212120;
+  margin: 0px;
+  padding: 20px 0px 20px 0px;
+}
+.data-imported-popup .popup-mainDiv .messageSection-MainDiv{
+  margin:35px 50px 40px 50px;
+}
+.data-imported-popup .popup-mainDiv .messageSection-MainDiv .heading-of-studentData h6{
+font-size: 16px;
+font-weight: 600;
+color: #212120;
+margin: 0px;
+padding: 0px 0px 10px 0px;
+}
+.data-imported-popup .popup-mainDiv .messageSection-MainDiv .list-of-data-mainDiv{
+  border: solid 1px #dad8d5;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+.data-imported-popup .popup-mainDiv .messageSection-MainDiv  .list-of-data-mainDiv ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+  flex-wrap: wrap;    
+}
+.data-imported-popup .popup-mainDiv .messageSection-MainDiv  .list-of-data-mainDiv ul li{
+  width: 30%;
+  text-align: center;
+  padding: 8px 0px 0px 0px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #767573;
+}
+.data-imported-popup .popup-mainDiv .messageSection-MainDiv .importedButton-MainDiv{
+  display: flex;
+  padding: 20px 0px 10px 0px;
+  justify-content: center;
+}
+.data-imported-popup .popup-mainDiv .messageSection-MainDiv .button-PopupWidth{
+  width: 25%;
+}
+.data-imported-popup .popup-mainDiv .messageSection-MainDiv .button-PopupWidth button{
+  width: 100%;
+  padding: 10px 0px 10px 0px;
+  border-radius: 4px;
+}
 
 
