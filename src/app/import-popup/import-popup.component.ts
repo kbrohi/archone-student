@@ -9,19 +9,21 @@ export class ImportPopupComponent implements OnInit {
   studentsRecord = []
   previousSchool = ""
   notInserted
-  fileName=""
-  popup="no"
+  fileName = ""
+  popup = "no"
   constructor(private router: Router, private apisService: ApisService) { }
 
   ngOnInit(): void {
   }
+  //close the popup
   close() {
     this.router.navigateByUrl('')
   }
+  //get the value of previous school to push in other fields
   setPreviousSchool(event) {
-    console.log(event)
     this.previousSchool = event
   }
+  //convert csv to jsom
   csv2Array(fileInput: FileList) {
     //read file from input
     const fileReaded = fileInput[0];
@@ -32,7 +34,6 @@ export class ImportPopupComponent implements OnInit {
     reader.onload = (e) => {
       let csv = reader.result + '';
       let lines = [];
-      //our new code
       let arr = csv.split('\n');
       let jsonObj = [];
       let headers = arr[0].split(',');
@@ -47,10 +48,10 @@ export class ImportPopupComponent implements OnInit {
         }
       }
       this.studentsRecord = [...jsonObj]
-
       // all rows in the csv file
     }
   }
+  //push the previous school to record and call the endpoint for update
   import() {
     this.studentsRecord = this.studentsRecord.map((single) => {
       single.previousSchool = this.previousSchool;
@@ -60,9 +61,7 @@ export class ImportPopupComponent implements OnInit {
     this.apisService.importSchoolData(this.studentsRecord).then(res => {
       this.notInserted = res.data.error;
       this.notInserted = this.notInserted.split(',')
-      this.popup='yes'
-      // window.alert("All students inserted successfully"+(this.notInserted?" except "+this.notInserted:""));
-      // this.router.navigateByUrl('')
+      this.popup = 'yes'
     })
   }
 }

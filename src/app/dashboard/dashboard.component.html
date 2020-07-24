@@ -1,11 +1,9 @@
-<!-- <p>dashboard</p>
-<button (click)="logout()">Logout<button> -->
-
 <div class="container-fluid">
     <div class="dataEntry-container">
-      {{students}}
+        {{students}}
         <!-- {/* data entry heading portion */} -->
-        <div class="dataEntry-header">
+        <div
+            class="dataEntry-header">
             <!-- {/* left side portion */} -->
             <div>
                 <div class="welcomeHeading fnt-family-sans">
@@ -17,7 +15,8 @@
                 </div>
             </div>
             <!-- {/* right side data */} -->
-            <div class="leftSide-inputs-buttons">
+            <div
+                class="leftSide-inputs-buttons">
                 <!-- {/* select and input */} -->
                 <div class="select-and-headerDiv">
                     <div>
@@ -29,57 +28,63 @@
                         </select>
                     </div>
                     <div>
-                        <input class="inputHeader-section fnt-family-sans" placeholder="Search" />
-                        <img src="../../assets/images/searchAngular-input.png" />
+                        <input class="inputHeader-section fnt-family-sans" value="" (keyup)="search($event.target.value)" name="search" placeholder="Search"/>
+                        <img src="../../assets/images/searchAngular-input.png"/>
                     </div>
                 </div>
                 <!-- {/* buttons */} -->
-                <div class="buttonMainDiv">
+                <div
+                    class="buttonMainDiv">
                     <!-- <button class="commonButton buttonColor btn-black mrg-left-10 fnt-family-sans">Add Student</button> -->
-                    <button class="commonButton buttonColor btn-red mrg-left-10 fnt-family-sans"
-                        (click)="import()">Import File</button>
+                    <button class="commonButton buttonColor btn-red mrg-left-10 fnt-family-sans" (click)="import()">Import File</button>
                 </div>
             </div>
         </div>
         <!-- {/* no data message displayed */} -->
         <!-- <div class="message-when-no-records fnt-family-sans">
-                            <h6>No record found.</h6>
-                        </div> -->
+                                            <h6>No record found.</h6>
+                                        </div> -->
         <!-- {/* table section starts from here */} -->
-        <div class="tableBody">
-            <!-- {/* header of data */} -->
+            <div
+            class="tableBody"> <!-- {/* header of data */} -->
             <div class="header-ImgAndHeading header-of-data-red-color">
                 <ul class="width-full-100">
 
                     <li class="Li-Image"></li>
 
                     <!-- {/* heading of data */} -->
-                    <ul class="img-span width-10">
+                    <ul
+                        class="img-span width-10">
                         <!-- <span><img src="../../assets/images/transparentArrow.png" width="13px"/></span> -->
                         <li class="schoolName fnt-family-sans">ID</li>
                     </ul>
                     <!-- {/* Studengt Name */} -->
-                    <ul class="img-span-StudentName width-18">
+                    <ul
+                        class="img-span-StudentName width-18">
                         <!-- <span><img src="../../assets/images/transparentArrow.png" width="13px"/></span> -->
                         <li class="schoolName fnt-family-sans">Student Name</li>
                     </ul>
                     <!-- {/* Grade */} -->
-                    <ul class="img-span width-10">
+                    <ul
+                        class="img-span width-10">
                         <!-- <span><img src="../../assets/images/transparentArrow.png" width="13px"/></span> -->
                         <li class="schoolName fnt-family-sans">Grade</li>
                     </ul>
                     <!-- {/* LAst School */} -->
-                    <ul class="img-span width-12">
+                    <ul
+                        class="img-span width-12">
                         <!-- <span><img src="../../assets/images/transparentArrow.png" width="13px"/></span> -->
                         <li class="schoolName fnt-family-sans">Last School</li>
                     </ul>
                     <!-- {/* Teacher Name */} -->
-                    <ul class="img-span width-20">
+                    <ul
+                        class="img-span width-20">
                         <!-- <span><img src="../../assets/images/transparentArrow.png" width="13px"/></span> -->
                         <li class="schoolName fnt-family-sans">Teacher Name</li>
                     </ul>
                     <!-- {/* Actions */} -->
-                    <ul class="img-span-actionsCell width-20">
+                    <ul
+                        class="img-span-actionsCell width-20">
                         <!-- <span><img src="../../assets/images/transparentArrow.png" width="13px"/></span> -->
                         <li class="schoolName fnt-family-sans">Actions</li>
                     </ul>
@@ -87,12 +92,12 @@
             </div>
             <!-- {/* body of table */} -->
             <div class="body-ImgAndData body-of-data-white-color">
-                <ul class="width-full-100 main-ul-of-form-table" *ngFor="let record of records">
+                <ul
+                    class="width-full-100 main-ul-of-form-table" *ngFor="let record of records">
                     <!-- list of data  starts from here-->
                     <ul class="d-flex-main-list">
                         <ul>
-                            <li class="body-Li-Image" (click)='setEditUserId(record.studentId, record)'><img
-                                    src="../../assets/images/tableDropdown.png" width="16px" /></li>
+                            <li class="body-Li-Image" (click)='setEditUserId(record.studentId, record)'><img src="../../assets/images/tableDropdown.png" width="16px"/></li>
                         </ul>
                         <ul class="width-10">
                             <li class="studentId fnt-family-sans">{{record.studentId}}</li>
@@ -112,28 +117,27 @@
                         <ul class="data-of-content buttonMarginLEft width-20">
                             <li class="buttons-of-body">
                                 <button class="commonButton border-black-button fnt-family-sans" (click)="delete(record.studentId)">Delete</button>
-                                <button class="commonButton border-red-button mrg-left-10 fnt-family-sans"
-                                    *ngIf="editStudentId!=record.studentId"
-                                    (click)='setEditUserId(record.studentId, record)'>Edit</button>
-                                <button class="commonButton border-red-button mrg-left-10 fnt-family-sans"
-                                    *ngIf="editStudentId==record.studentId" (click)="update()">Update</button>
+                                <button class="commonButton border-red-button mrg-left-10 fnt-family-sans" *ngIf="editStudentId!=record.studentId" (click)='setEditUserId(record.studentId, record)'>Edit</button>
+                                <button class="commonButton border-red-button mrg-left-10 fnt-family-sans" *ngIf="editStudentId==record.studentId" (click)="update()">Update</button>
                             </li>
                         </ul>
                     </ul>
                     <!-- {/* dayta entry form */} -->
                     <div class="form-of-dataEntry" *ngIf="checkId(record.studentId)">
-                        <form #updateRecord="ngForm">
+                        <form
+                            #updaterecord="ngForm">
                             <!-- {/* row 1 name , date of birth , gender */} -->
-                            <div class="row-of-form">
+                            <div
+                                class="row-of-form">
                                 <!-- {/* name */} -->
                                 <div class="label-And-input">
                                     <label>Name</label>
-                                    <input class="input-of-dataEntry" value={{editRecord.name}} (keyup)="changeField('name',$event.target.value)"  name="name" placeholder="" />
+                                    <input class="input-of-dataEntry" value={{editRecord.name}} (keyup)="changeField('name',$event.target.value)" name="name" placeholder=""/>
                                 </div>
                                 <!-- {/* Date of birth */} -->
                                 <div class="label-And-input">
                                     <label>Date Of Birth</label>
-                                    <input class="input-of-dataEntry" value={{editRecord.dob}} (keyup)="changeField('dob',$event.target.value)"  name="dob" placeholder="" />
+                                    <input class="input-of-dataEntry" value={{editRecord.dob}} (keyup)="changeField('dob',$event.target.value)" name="dob" placeholder=""/>
                                 </div>
                                 <!-- {/* name */} -->
                                 <div class="label-And-input">
@@ -146,41 +150,40 @@
                                 </div>
                             </div>
                             <!-- {/* second row  Address , State , Grader */} -->
-                            <div class="row-of-form">
+                            <div
+                                class="row-of-form">
                                 <!-- {/* Address */} -->
                                 <div class="label-And-input">
                                     <label>Address</label>
-                                    <input class="input-of-dataEntry" value={{editRecord.address}} (keyup)="changeField('address',$event.target.value)" name="address"  placeholder="" />
+                                    <input class="input-of-dataEntry" value={{editRecord.address}} (keyup)="changeField('address',$event.target.value)" name="address" placeholder=""/>
                                 </div>
                                 <!-- {/* State */} -->
                                 <div class="label-And-input">
                                     <label>State</label>
-                                    <input class="input-of-dataEntry" value={{editRecord.state}} (keyup)="changeField('state',$event.target.value)" name="state" placeholder="" />
+                                    <input class="input-of-dataEntry" value={{editRecord.state}} (keyup)="changeField('state',$event.target.value)" name="state" placeholder=""/>
                                 </div>
                                 <!-- {/* Grade*/} -->
                                 <div class="label-And-input">
                                     <label>Grade</label>
-                                    <input class="input-of-dataEntry" value={{editRecord.grade}} (keyup)="changeField('grade',$event.target.value)" name="grade" placeholder="" />
+                                    <input class="input-of-dataEntry" value={{editRecord.grade}} (keyup)="changeField('grade',$event.target.value)" name="grade" placeholder=""/>
                                 </div>
                             </div>
                             <!-- {/* third row  Teacher Name */} -->
-                            <div class="row-of-form">
+                            <div
+                                class="row-of-form">
                                 <!-- {/* Teacher Name */} -->
                                 <div class="label-And-input">
                                     <label>Teacher Name</label>
-                                    <input class="input-of-dataEntry" value={{editRecord.teacherName}} (keyup)="changeField('teacherName',$event.target.value)" name="teacherName"
-                                        placeholder="" />
+                                    <input class="input-of-dataEntry" value={{editRecord.teacherName}} (keyup)="changeField('teacherName',$event.target.value)" name="teacherName" placeholder=""/>
                                 </div>
                                 <div class="label-And-input">
-                                  <label>Previous School</label>
-                                  <input class="input-of-dataEntry" value={{editRecord.previousSchool}} (keyup)="changeField('previousSchool',$event.target.value)" name="teacherName"
-                                      placeholder="" />
-                              </div>
-                              <div class="label-And-input">
-                                <label>Current School</label>
-                                <input class="input-of-dataEntry" value={{editRecord.currentSchool}} (keyup)="changeField('currentSchool',$event.target.value)" name="teacherName"
-                                    placeholder="" />
-                            </div>
+                                    <label>Previous School</label>
+                                    <input class="input-of-dataEntry" value={{editRecord.previousSchool}} (keyup)="changeField('previousSchool',$event.target.value)" name="teacherName" placeholder=""/>
+                                </div>
+                                <div class="label-And-input">
+                                    <label>Current School</label>
+                                    <input class="input-of-dataEntry" value={{editRecord.currentSchool}} (keyup)="changeField('currentSchool',$event.target.value)" name="teacherName" placeholder=""/>
+                                </div>
                             </div>
                         </form>
                     </div>

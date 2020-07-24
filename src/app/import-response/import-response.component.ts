@@ -6,15 +6,15 @@ import { Router } from "@angular/router";
 })
 
 export class ImportResponseComponent implements OnInit {
-  newusers=[]
+  newusers = []
   @Input() users
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    this.newusers=this.users
+    this.newusers = this.users
   }
-  close(){
+  //close the popup
+  close() {
     this.router.navigateByUrl('')
   }
-
 }

@@ -1,34 +1,36 @@
 <div class="container-fluid">
-  <div class="data-imported-popup">
-      <!--  background popup -->
-      <div class="popup-mainDiv">
-          <!-- close image -->
-          <div class="dataPopup-img">
-              <img src='../../assets/images/false.png' class="cursor-pointer" (click)="close()"/>
-          </div>
-          <!-- heading -->
-          <div class="heading-dataPopup fnt-family-sans">
-              <h5>Data Imported Successfully</h5>
-          </div>
-          <!-- message section -->
-          <div class="messageSection-MainDiv">
-              <!-- heading -->
-              <div class="heading-of-studentData fnt-family-sans">
-                  <h6>Students data already exist.</h6>
-              </div>
-              <div class="list-of-data-mainDiv">
-               
-                  <ul>
-                    <li *ngFor="let user of newusers" class="fnt-family-sans">{{user}}</li>
-                  </ul>
-              </div>
-              <!-- buttons -->
-              <div class="importedButton-MainDiv">
-                  <div class="button-PopupWidth">
-                      <Button class="loginButton buttonColor cursor-pointer btn-red fnt-family-sans" (click)="close()">Close</Button>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+    <div
+        class="data-imported-popup">
+        <!--  background popup -->
+        <div
+            class="popup-mainDiv">
+            <!-- close image -->
+            <div class="dataPopup-img">
+                <img src='../../assets/images/false.png' class="cursor-pointer" (click)="close()"/>
+            </div>
+            <!-- heading -->
+            <div class="heading-dataPopup fnt-family-sans">
+                <h5>Data Imported Successfully</h5>
+            </div>
+            <!-- message section -->
+            <div
+                class="messageSection-MainDiv">
+                <!-- heading -->
+                <div class="heading-of-studentData fnt-family-sans">
+                    <h6>Students data already exist.</h6>
+                </div>
+                <div class="list-of-data-mainDiv">
+                    <ul>
+                        <li *ngFor="let user of newusers" class="fnt-family-sans">{{user}}</li>
+                    </ul>
+                </div>
+                <!-- buttons -->
+                <div class="importedButton-MainDiv">
+                    <div class="button-PopupWidth">
+                        <Button class="loginButton buttonColor cursor-pointer btn-red fnt-family-sans" (click)="close()">Close</Button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
