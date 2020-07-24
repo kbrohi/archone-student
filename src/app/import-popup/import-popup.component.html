@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <div class="container-popup">
+        <!-- {/* popup */} -->
+        <div class="mainDiv-of-popup">
+            <div class="cross-img cursor-pointer">
+                <img src='../../assets/images/false.png' (click)="close()" />
+            </div>
+            <!-- {/* import file heading */} -->
+            <div class="import-heading fnt-family-sans">
+                <h6>Import School Data</h6>
+            </div>
+            <!-- {/* input and label */} -->
+            <form>
+                <div class="inside-form-tag">
+                    <div class="input-upload-file">
+                        <div class="input-container">
+                            <label>Choose File
+                                <input required id="myInput" type="file" accept=".csv"
+                                    (change)="csv2Array($event.target.files)" />
+                                <div class="file-icon">
+                                    <img src="../../assets/images/attach.png" height="25px" alt="" />
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- {/* Add School Name */} -->
+                    <div class="label-and-input-mainDiv fnt-family-sans">
+                        <div class="label-main-div-of-schoolName">
+                            <label>Add School Name</label>
+                        </div>
+                        <div class="input-container popup-second-div-inpus-label">
+                            <input required id="myInput" (change)="csv2Array($event.target.files)" />
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="popup-button btn-red fnt-family-sans" (click)='import()'>Import</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

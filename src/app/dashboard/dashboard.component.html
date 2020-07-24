@@ -1,0 +1,180 @@
+<!-- <p>dashboard</p>
+<button (click)="logout()">Logout<button> -->
+
+<div class="container-fluid">
+    <div class="dataEntry-container">
+        <!-- {/* data entry heading portion */} -->
+        <div class="dataEntry-header">
+            <!-- {/* left side portion */} -->
+            <div>
+                <div class="welcomeHeading fnt-family-sans">
+                    <h5>Welcome!</h5>
+                </div>
+                <div class="schoolName-Date fnt-family-sans">
+                    <h5>School Name</h5>
+                    <h6>06/25/2020</h6>
+                </div>
+            </div>
+            <!-- {/* right side data */} -->
+            <div class="leftSide-inputs-buttons">
+                <!-- {/* select and input */} -->
+                <div class="select-and-headerDiv">
+                    <div>
+                        <select class="selectOption-for-Filter fnt-family-sans">
+                            <option>Filter By</option>
+                            <option>Name</option>
+                            <option>Previous School</option>
+                            <option>Id</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input class="inputHeader-section fnt-family-sans" placeholder="Search" />
+                        <img src="../../assets/images/searchAngular-input.png" />
+                    </div>
+                </div>
+                <!-- {/* buttons */} -->
+                <div class="buttonMainDiv">
+                    <!-- <button class="commonButton buttonColor btn-black mrg-left-10 fnt-family-sans">Add Student</button> -->
+                    <button class="commonButton buttonColor btn-red mrg-left-10 fnt-family-sans"
+                        (click)="import()">Import File</button>
+                </div>
+            </div>
+        </div>
+        <!-- {/* no data message displayed */} -->
+        <!-- <div class="message-when-no-records fnt-family-sans">
+                            <h6>No record found.</h6>
+                        </div> -->
+        <!-- {/* table section starts from here */} -->
+        <div class="tableBody">
+            <!-- {/* header of data */} -->
+            <div class="header-ImgAndHeading header-of-data-red-color">
+                <ul class="width-full-100">
+
+                    <li class="Li-Image"></li>
+
+                    <!-- {/* heading of data */} -->
+                    <ul class="img-span width-10">
+                        <!-- <span><img src="../../assets/images/transparentArrow.png" width="13px"/></span> -->
+                        <li class="schoolName fnt-family-sans">ID</li>
+                    </ul>
+                    <!-- {/* Studengt Name */} -->
+                    <ul class="img-span-StudentName width-18">
+                        <!-- <span><img src="../../assets/images/transparentArrow.png" width="13px"/></span> -->
+                        <li class="schoolName fnt-family-sans">Student Name</li>
+                    </ul>
+                    <!-- {/* Grade */} -->
+                    <ul class="img-span width-10">
+                        <!-- <span><img src="../../assets/images/transparentArrow.png" width="13px"/></span> -->
+                        <li class="schoolName fnt-family-sans">Grade</li>
+                    </ul>
+                    <!-- {/* LAst School */} -->
+                    <ul class="img-span width-12">
+                        <!-- <span><img src="../../assets/images/transparentArrow.png" width="13px"/></span> -->
+                        <li class="schoolName fnt-family-sans">Last School</li>
+                    </ul>
+                    <!-- {/* Teacher Name */} -->
+                    <ul class="img-span width-20">
+                        <!-- <span><img src="../../assets/images/transparentArrow.png" width="13px"/></span> -->
+                        <li class="schoolName fnt-family-sans">Teacher Name</li>
+                    </ul>
+                    <!-- {/* Actions */} -->
+                    <ul class="img-span-actionsCell width-20">
+                        <!-- <span><img src="../../assets/images/transparentArrow.png" width="13px"/></span> -->
+                        <li class="schoolName fnt-family-sans">Actions</li>
+                    </ul>
+                </ul>
+            </div>
+            <!-- {/* body of table */} -->
+            <div class="body-ImgAndData body-of-data-white-color">
+                <ul class="width-full-100 main-ul-of-form-table" *ngFor="let record of records">
+                    <!-- list of data  starts from here-->
+                    <ul class="d-flex-main-list">
+                        <ul>
+                            <li class="body-Li-Image" (click)='setEditUserId(record.studentId)'><img
+                                    src="../../assets/images/tableDropdown.png" width="16px" /></li>
+                        </ul>
+                        <ul class="width-10">
+                            <li class="studentId fnt-family-sans">{{record.studentId}}</li>
+                        </ul>
+                        <ul class="data-of-contentName width-18">
+                            <li class="studentName fnt-family-sans">{{record.name}}</li>
+                        </ul>
+                        <ul class="width-10">
+                            <li class="studentGrade fnt-family-sans">{{record.grade}}</li>
+                        </ul>
+                        <ul class="data-of-content width-12">
+                            <li class="schoolName fnt-family-sans">{{record.previousSchool}}</li>
+                        </ul>
+                        <ul class="data-of-content width-20">
+                            <li class="TeacherName fnt-family-sans">{{record.teacherName}}</li>
+                        </ul>
+                        <ul class="data-of-content buttonMarginLEft width-20">
+                            <li class="buttons-of-body">
+                                <button class="commonButton border-black-button fnt-family-sans">Delete</button>
+                                <button class="commonButton border-red-button mrg-left-10 fnt-family-sans"
+                                    *ngIf="editStudentId!=record.studentId"
+                                    (click)='setEditUserId(record.studentId)'>Edit</button>
+                                <button class="commonButton border-red-button mrg-left-10 fnt-family-sans"
+                                    *ngIf="editStudentId==record.studentId">Save</button>
+                            </li>
+                        </ul>
+                    </ul>
+                    <!-- {/* dayta entry form */} -->
+                    <div class="form-of-dataEntry" *ngIf="checkId(record.studentId)">
+                        <form>
+                            <!-- {/* row 1 name , date of birth , gender */} -->
+                            <div class="row-of-form">
+                                <!-- {/* name */} -->
+                                <div class="label-And-input">
+                                    <label>Name</label>
+                                    <input class="input-of-dataEntry" value={{record.name}} placeholder="" />
+                                </div>
+                                <!-- {/* Date of birth */} -->
+                                <div class="label-And-input">
+                                    <label>Date Of Birth</label>
+                                    <input class="input-of-dataEntry" value={{record.dob}} placeholder="" />
+                                </div>
+                                <!-- {/* name */} -->
+                                <div class="label-And-input">
+                                    <label>Gender</label>
+                                    <select value={{record.gender}} class="select-of-dataEntry">
+                                        <option>Select Gender</option>
+                                        <option vale="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- {/* second row  Address , State , Grader */} -->
+                            <div class="row-of-form">
+                                <!-- {/* Address */} -->
+                                <div class="label-And-input">
+                                    <label>Address</label>
+                                    <input class="input-of-dataEntry" value={{record.address}} placeholder="" />
+                                </div>
+                                <!-- {/* State */} -->
+                                <div class="label-And-input">
+                                    <label>State</label>
+                                    <input class="input-of-dataEntry" value={{record.state}} placeholder="" />
+                                </div>
+                                <!-- {/* Grade*/} -->
+                                <div class="label-And-input">
+                                    <label>Grade</label>
+                                    <input class="input-of-dataEntry" value={{record.grade}} placeholder="" />
+                                </div>
+                            </div>
+                            <!-- {/* third row  Teacher Name */} -->
+                            <div class="row-of-form">
+                                <!-- {/* Teacher Name */} -->
+                                <div class="label-And-input">
+                                    <label>Teacher Name</label>
+                                    <input class="last-input-of-dataEntry" value={{record.teacherName}}
+                                        placeholder="" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

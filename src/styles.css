@@ -1,0 +1,872 @@
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.tableBody .form-of-dataEntry .label-And-input .last-input-of-dataEntry{
+  height: 40px;
+  border-radius: 4px;
+  border: solid 1px #DAD8D5;
+  background-color: #FFFFFF;
+  width: 29%;
+  margin: 6px 0px 0px 0px;
+  padding: 0px 10px 0px 10px;
+}
+.tableBody .form-of-dataEntry .label-And-input .select-of-dataEntry{
+  height: 40px;
+  border-radius: 4px;
+  border: solid 1px #DAD8D5;
+  background-color: #FFFFFF;
+  width: 90%;
+  margin: 6px 0px 0px 0px;
+  padding: 0px 10px 0px 10px;
+}
+/* common css  */
+.commonButton{
+width: 127px;
+height: 36px;
+border-radius: 4px;
+cursor: pointer;
+}
+.buttonColor{
+font-size: 14px;
+font-weight: 600;
+color: #FFFFFF;
+}
+/*full color */
+.btn-red{
+  background-color: #DB2B23;
+  border: 1px solid #DB2B23;
+}
+.btn-black{
+  background-color: #393B3C;
+  border: 1px solid #393B3C;
+}
+/* border color */
+.border-black-button{
+  border: 1px solid #393B3C;
+  color: #393B3C;
+}
+.border-red-button{
+  border: 1px solid #DB2B23;
+  color: #DB2B23;
+}
+/* margin css */
+.mrg-left-10{
+  margin-left: 10px;
+}
+.mrg-right-10{
+  margin-right: 10px;
+}
+.mrg-left-20{
+  margin-left: 20px;
+}
+.mrg-right-20{
+  margin-right: 20px;
+}
+/* common width  */
+.width-full-100{
+  width: 100%;
+}
+.width-10{
+  width: 10%;
+}
+.width-12{
+  width: 12%;    
+}
+.width-18{
+  width: 18%;    
+}
+.width-20{
+  width: 20%;
+}
+/* data entry table colors */
+.header-of-data-red-color{
+  background-color: #DB2B23;    
+}
+.body-of-data-white-color{
+  background-color: #fff;
+}
+
+/* style for background color full screen  */
+html{
+  height: 100%;
+}
+bodY{
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #F1F1F1;
+}
+div#root {
+  height: 100%;
+}
+.fnt-family-sans{
+  font-family: 'Roboto', sans-serif;
+}
+/* ends here */
+
+/* header css */
+.headerMainDiv{
+  background-color:"#fff";
+  width: 100%;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.13);
+  background-color: #FFFFFF;
+}
+.headerMainDiv .header{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
+}
+.headerMainDiv .header h5{
+  margin: 0px;
+  font-weight: bold;
+  font-stretch: normal;
+  color: #212120;
+  font-size: 24px;
+}
+.headerMainDiv .header span{
+  font-size: 14px;
+  font-weight: normal;
+  color: #767573;
+  display: flex;
+  align-items: center;
+}
+/* login page */
+
+.login-container{
+  background-color: #F1F1F1;
+  display: flex;
+  justify-content: center;
+}
+.login-container .login-main-div{
+  width: 50%;
+  background-color: #fff;
+  margin: 50px 0px 50px 0px;
+  padding: 0px 0px 40px 0px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.09);
+}
+.login-container .login-main-div .heading h5{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #212120;
+  padding: 40px 0px 0px 0px;
+}
+.login-container .login-main-div .label-And-input-MainDiv{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.login-container .login-main-div .label-And-input-MainDiv .insideMain-Div{
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0px 0px 0px;
+}
+.login-container .login-main-div .label-And-input-MainDiv .insideMain-Div label{
+font-size: 16px;
+font-weight: 600;
+color: #212120;
+}
+.login-container .login-main-div .label-And-input-MainDiv .insideMain-Div .login-input{
+width: 380px;
+height: 50px;
+padding: 0px 0px 0px 10px;
+border-radius: 4px;
+border: solid 1px #DAD8D5;
+background-color: #FFFFFF;
+margin:10px 0px 0px 0px;
+}
+.login-container .login-main-div .label-And-input-MainDiv .checkbox-mainDiv{
+  width: 370px;
+  margin: 20px 0px 0px 0px;
+}
+.login-container .login-main-div .label-And-input-MainDiv .buttons .loginButton{
+  width: 220px;
+  height: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 40px 0px 0px 0px;
+}
+.login-container .login-main-div .label-And-input-MainDiv .forgotten-Password h6{
+font-size: 16px;
+font-weight: normal;
+text-align: center;
+color: #DB2B23;
+margin: 20px 0px 0px 0px;
+}
+
+/* popup */
+.container-popup{
+  display: flex;
+  justify-content: center;
+  background-color: #F1F1F1;
+}
+.container-popup .mainDiv-of-popup{
+  width: 50%;
+  margin: 40px 0px 50px 0px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.09);
+  background-color: #FFFFFF;
+  border-radius: 4px;
+}
+.container-popup .mainDiv-of-popup .cross-img{
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 20px 20px 0px;
+}
+.container-popup .mainDiv-of-popup .import-heading h6{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #212120;
+  padding: 0px 0px 20px 0px;
+}
+.container-popup .mainDiv-of-popup .inside-form-tag{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin: 30px 0px 50px 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-popup .mainDiv-of-popup .label-and-input-mainDiv {
+    margin: 30px 0px 0px 0px;
+    width: 83%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container-popup .mainDiv-of-popup .label-and-input-mainDiv .label-main-div-of-schoolName{
+  padding: 0px 0px 0px 10%;
+}
+.container-popup .mainDiv-of-popup .label-and-input-mainDiv label{
+  font-size: 16px; 
+  font-weight: 600;
+  color: #212120;
+}
+.container-popup .mainDiv-of-popup .label-and-input-mainDiv input{
+width: 88%;
+padding: 0px 10px 0px 10px;
+margin: 10px 10% 0px 10%;
+height: 50px;
+border-radius: 4px;
+border: solid 1px #DAD8D5;
+background-color: #FFFFFF;
+font-size: 16px;
+font-weight: normal;
+color: #767573;
+}
+.container-popup .mainDiv-of-popup .label-and-input-mainDiv img{
+  position: absolute;
+  margin: 22px 0px 0px -25px;
+}
+.container-popup .mainDiv-of-popup .buttons .popup-button{
+  width: 220px;
+  height: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 40px 0px 0px 0px;
+  font-size: 16px;
+  color: #fff;
+}
+.red-checkbox-container {
+  display: block;
+  position: relative;
+  padding:10px 0px 0px 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 30%;
+  font-size: 14px;
+  font-weight: normal;
+  color: #212120;
+}
+/* Hide the browser's default checkbox */
+.red-checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border:1px solid red;
+}
+/* When the checkbox is checked, add a blue background */
+.red-checkbox-container input:checked ~ .checkmark {
+  background-color: red;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the checkmark when checked */
+.red-checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+/* Style the checkmark/indicator */
+.red-checkbox-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.dataEntry-container{
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #F1F1F1;
+}
+.dataEntry-container .dataEntry-header{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+.dataEntry-header .welcomeHeading h5{
+font-size: 24px;
+font-weight: 600;
+color: #212120;
+}
+.dataEntry-header .schoolName-Date{
+  display: flex;
+}
+.dataEntry-header .schoolName-Date h5{
+font-size: 20px;
+margin: 0px;
+font-weight: normal;
+color: #212120;
+}
+.dataEntry-header .schoolName-Date h6{
+font-size: 16px;
+margin: 0px;
+font-weight: normal;
+color: #767573;
+padding-left: 15px;
+padding-top: 4px;
+}
+/* right side css of header */
+/* .dataEntry-header .leftSide-inputs-buttons{
+  display: flex;
+  padding-top: 20px;
+} */
+.dataEntry-header .leftSide-inputs-buttons .selectOption-for-Filter{
+  height: 37px;
+  padding: 5px 40px 6px 5px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #767573;
+  border: 1px solid #DAD8D5;
+}
+.dataEntry-header .leftSide-inputs-buttons .select-and-headerDiv{
+  display: flex;
+}
+.dataEntry-header .leftSide-inputs-buttons .inputHeader-section{
+      padding: 1px 30px 1px 10px;
+      width: 270px;
+      margin: 0px 0px 0px 10px;
+      border: 1px solid #DAD8D5;
+      color: #767573;
+      font-size: 16px;
+      font-weight: normal;
+      height: 37px;
+}
+.dataEntry-header .leftSide-inputs-buttons img{
+  width: 20px;
+  position: absolute;
+  z-index: 1111;
+  position: absolute;
+  margin: 7px 0px 0px -28px;
+}
+/* message for records */
+.message-when-no-records{
+  margin: 30px 0px 10px 0px;
+}
+.message-when-no-records h6{
+font-size: 18px;
+font-weight: 600;
+color: #212120;
+}
+/* body section of table */
+.tableBody{
+  padding: 18px 0px 25px 0px;
+}
+.tableBody .header-ImgAndHeading{
+  border-radius: 4px;
+  margin-top: 2%;
+}
+.tableBody .header-ImgAndHeading ul{
+  display: flex;
+}
+.tableBody .header-ImgAndHeading ul .img-span{
+  display: flex;
+  padding: 15px 0px 15px 20px;
+  /* flex: 1; */
+}
+.tableBody .header-ImgAndHeading ul .img-span-StudentName{
+  display: flex;
+  padding: 15px 0px 15px 0px;
+  /* flex: 2; */
+}
+.tableBody .header-ImgAndHeading ul .img-span-actionsCell{
+  display: flex;
+  padding: 15px 0px 15px 20px;
+  /* flex: 2; */
+}
+.tableBody .header-ImgAndHeading ul .Li-Image{
+  padding: 15px 25px 10px 26px;
+  border-right: 1px solid #F1F1F1;
+}
+.tableBody .header-ImgAndHeading ul .schoolName{
+  padding: 0px 0px 0px 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+/* body of table css */
+.tableBody .body-ImgAndData ul{
+  display: flex;
+}
+.tableBody .body-ImgAndData .schoolName-And-Buttons-Div{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-top: 1px solid #DAD8D5;
+  border-bottom: 1px solid #DAD8D5;
+  border-right: 1px solid #DAD8D5;
+}
+.tableBody .body-ImgAndData ul .body-Li-Image{
+  padding: 15px 15px 10px 16px;
+  border: 1px solid #DAD8D5;
+}
+.tableBody .body-ImgAndData ul .studentId{
+  padding: 12px 0px 0px 27px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #212120;    
+}
+.tableBody .body-ImgAndData ul .studentName{
+  padding: 12px 0px 0px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #212120;
+}
+.tableBody .body-ImgAndData ul .studentGrade{
+  padding: 12px 0px 0px 50px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #212120;
+}
+.tableBody .body-ImgAndData ul .schoolName{
+  padding: 12px 0px 0px 35px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #212120;
+}
+.tableBody .body-ImgAndData ul .TeacherName{
+  padding: 12px 0px 0px 35px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #212120;
+}
+.tableBody .body-ImgAndData ul .buttons-of-body{
+  display: flex;
+  align-items: center;
+  padding: 0px 10px 0px 0px;
+}
+.buttonMarginLEft{
+  margin: 6px 0px 0px 25px;
+}
+/* form css starts from here */
+.tableBody .form-of-dataEntry .row-of-form{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px 0px 20px 0px;
+}
+.tableBody .form-of-dataEntry .label-And-input{
+  display: flex;
+  flex-direction: column;
+  margin: 0px 20px 0px 0px;
+  flex: 1;
+}
+.tableBody .form-of-dataEntry .label-And-input label{
+font-size: 12px;
+font-weight: 600;
+color: #212120;
+}
+.tableBody .form-of-dataEntry .label-And-input .input-of-dataEntry{
+  height: 40px;
+  border-radius: 4px;
+  border: solid 1px #DAD8D5;
+  background-color: #FFFFFF;
+  width: 90%;
+  margin: 6px 0px 0px 0px;
+  padding: 0px 10px 0px 10px;
+}
+/* data entry */
+.d-flex-main-list{
+  display: flex;
+}
+.dataEntry-container{
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #F1F1F1;
+}
+.dataEntry-container .dataEntry-header{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+.dataEntry-header .welcomeHeading h5{
+font-size: 24px;
+font-weight: 600;
+color: #212120;
+margin: 0px;
+}
+.dataEntry-header .schoolName-Date{
+  display: flex;
+  padding: 10px 0px 0px 0px;
+}
+.dataEntry-header .schoolName-Date h5{
+font-size: 20px;
+font-weight: normal;
+color: #212120;
+}
+.dataEntry-header .schoolName-Date h6{
+font-size: 16px;
+font-weight: normal;
+color: #767573;
+padding-left: 15px;
+padding-top: 4px;
+}
+/* right side css of header */
+.dataEntry-header .leftSide-inputs-buttons{
+  display: flex;
+  padding-top: 20px;
+}
+.dataEntry-header .leftSide-inputs-buttons .selectOption-for-Filter{
+  height: 40px;
+  padding: 5px 40px 5px 5px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #767573;
+  border: 1px solid #DAD8D5;
+}
+.dataEntry-header .leftSide-inputs-buttons .select-and-headerDiv{
+  display: flex;
+}
+.dataEntry-header .leftSide-inputs-buttons .inputHeader-section{
+      padding: 1px 30px 0px 10px;
+      width: 270px;
+      margin: 0px 0px 0px 10px;
+      border: 1px solid #DAD8D5;
+      color: #767573;
+      font-size: 16px;
+      font-weight: normal;
+      height: 37px;
+}
+.dataEntry-header .leftSide-inputs-buttons img{
+  width: 20px;
+  position: absolute;
+  z-index: 1111;
+  position: absolute;
+  margin: 10px 0px 0px -28px;
+}
+/* message for records */
+.message-when-no-records{
+  margin: 30px 0px 10px 0px;
+}
+.message-when-no-records h6{
+font-size: 18px;
+font-weight: 600;
+color: #212120;
+}
+/* body section of table */
+.tableBody{
+  padding: 18px 0px 25px 0px;
+}
+.tableBody .header-ImgAndHeading{
+  border-radius: 4px;
+  margin-top: 2%;
+}
+.tableBody .header-ImgAndHeading ul{
+  display: flex;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.tableBody .header-ImgAndHeading ul .img-span{
+  display: flex;
+  padding: 15px 0px 15px 20px;
+  /* flex: 1; */
+}
+.tableBody .header-ImgAndHeading ul .img-span-StudentName{
+  display: flex;
+  padding: 15px 0px 15px 0px;
+  /* flex: 2; */
+}
+.tableBody .header-ImgAndHeading ul .img-span-actionsCell{
+  display: flex;
+  padding: 15px 0px 15px 20px;
+  /* flex: 2; */
+}
+.tableBody .header-ImgAndHeading ul .Li-Image{
+  padding: 15px 25px 10px 26px;
+  border-right: 1px solid #F1F1F1;
+}
+.tableBody .header-ImgAndHeading ul .schoolName{
+  padding: 0px 0px 0px 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+/* body of table css */
+.tableBody .body-ImgAndData .main-ul-of-form-table{
+  flex-direction: column;
+}
+.tableBody .body-ImgAndData ul{
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.tableBody .body-ImgAndData .schoolName-And-Buttons-Div{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-top: 1px solid #DAD8D5;
+  border-bottom: 1px solid #DAD8D5;
+  border-right: 1px solid #DAD8D5;
+}
+.tableBody .body-ImgAndData ul .body-Li-Image{
+  padding: 15px 15px 10px 19px;
+  border: 1px solid #DAD8D5;
+}
+.tableBody .body-ImgAndData ul .studentId{
+  padding: 12px 0px 0px 27px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #212120;    
+}
+.tableBody .body-ImgAndData ul .studentName{
+  padding: 12px 0px 0px 35px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #212120;
+}
+.tableBody .body-ImgAndData ul .studentGrade{
+  padding: 12px 0px 0px 50px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #212120;
+}
+.tableBody .body-ImgAndData ul .data-of-content{
+  padding: 0px 0px 0px 17px;
+}
+.tableBody .body-ImgAndData ul .schoolName{
+  padding: 12px 0px 0px 50px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #212120;
+}
+.tableBody .body-ImgAndData ul .TeacherName{
+  padding: 12px 0px 0px 50px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #212120;
+}
+.tableBody .body-ImgAndData ul .buttons-of-body{
+  display: flex;
+  align-items: center;
+  padding: 0px 10px 0px 0px;
+}
+.buttonMarginLEft{
+  margin: 6px 0px 0px 25px;
+}
+/* form css starts from here */
+.tableBody .form-of-dataEntry{
+  background:#fdf4f4;
+  padding: 0 5% 0 5%;
+}
+.tableBody .form-of-dataEntry .row-of-form{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px 0px 20px 0px;
+}
+.tableBody .form-of-dataEntry .label-And-input{
+  display: flex;
+  flex-direction: column;
+  margin: 0px 20px 0px 0px;
+  flex: 1;
+}
+.tableBody .form-of-dataEntry .label-And-input label{
+font-size: 12px;
+font-weight: 600;
+color: #212120;
+}
+.tableBody .form-of-dataEntry .label-And-input .input-of-dataEntry{
+  height: 40px;
+  border-radius: 4px;
+  border: solid 1px #DAD8D5;
+  background-color: #FFFFFF;
+  width: 90%;
+  margin: 6px 0px 0px 0px;
+  padding: 0px 10px 0px 10px;
+}
+.tableBody .form-of-dataEntry .label-And-input .last-input-of-dataEntry{
+  height: 40px;
+  border-radius: 4px;
+  border: solid 1px #DAD8D5;
+  background-color: #FFFFFF;
+  width: 29%;
+  margin: 6px 0px 0px 0px;
+  padding: 0px 10px 0px 10px;
+}
+.tableBody .form-of-dataEntry .label-And-input .select-of-dataEntry{
+  height: 40px;
+  border-radius: 4px;
+  border: solid 1px #DAD8D5;
+  background-color: #FFFFFF;
+  width: 95%;
+  margin: 6px 0px 0px 0px;
+  padding: 0px 10px 0px 10px;
+}
+/* common css  */
+.commonButton{
+width: 127px;
+height: 36px;
+border-radius: 4px;
+cursor: pointer;
+}
+.buttonColor{
+font-size: 14px;
+font-weight: 600;
+color: #FFFFFF;
+}
+/*full color */
+.btn-red{
+  background-color: #DB2B23;
+  border: 1px solid #DB2B23;
+}
+.btn-black{
+  background-color: #393B3C;
+  border: 1px solid #393B3C;
+}
+/* border color */
+.border-black-button{
+  border: 1px solid #393B3C;
+  color: #393B3C;
+}
+.border-red-button{
+  border: 1px solid #DB2B23;
+  color: #DB2B23;
+}
+/* margin css */
+.mrg-left-10{
+  margin-left: 10px;
+}
+.mrg-right-10{
+  margin-right: 10px;
+}
+.mrg-left-20{
+  margin-left: 20px;
+}
+.mrg-right-20{
+  margin-right: 20px;
+}
+/* common width  */
+.width-full-100{
+  width: 100%;
+}
+.width-10{
+  width: 10%;
+}
+.width-12{
+  width: 12%;    
+}
+.width-18{
+  width: 18%;    
+}
+.width-20{
+  width: 20%;
+}
+/* data entry table colors */
+.header-of-data-red-color{
+  background-color: #DB2B23;    
+}
+.body-of-data-white-color{
+  background-color: #fff;
+}
+
+/* browse file new */
+.input-upload-file .input-container {
+  position: relative;
+  width: 80%
+}
+.label-and-input-mainDiv .popup-second-div-inpus-label{
+    display: flex;
+    justify-content: center;
+}
+.input-container label {
+  padding: 10px;
+    position: relative;
+    height: 29px;
+    border-radius: 4px;
+    border: solid 1px #DAD8D5;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #767573;
+}
+.file-icon {
+  position: absolute;
+  right: 17px;
+  top: 11px;
+}
+.input-upload-file {
+  width: 83%;
+  display: flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  justify-content: center;
+  /* position: relative; */
+}
+.input-container input[type="file"] {
+  display: none;
+}
+.input-upload-file input[type=file]:before {  
+  height: 32px;
+  font-size: 14px;
+  line-height: 32px;
+  content: '';
+  display: inline-block;
+  background: white;
+  border: 1px solid #c9c9c9;
+  padding: 0 10px;
+  border-radius: 2px;
+}
+
+
+
+

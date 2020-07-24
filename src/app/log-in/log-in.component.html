@@ -1,0 +1,47 @@
+<!-- <p>log-in works!</p>
+<div>
+  <button (click)="login()">Login</button>
+  <p>{{click}}</p>
+</div> -->
+
+<div class="container-fluid">
+  <div class="login-container">
+      <!-- {/* login starts from here */} -->
+      <div class="login-main-div">
+          <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
+              <!-- {/* heading */} -->
+              <div class="heading fnt-family-sans">
+                  <h5>Welcome to School Management System</h5>
+              </div>
+              <!-- {/* label and input */} -->
+              <div class="label-And-input-MainDiv">
+                  <!-- {/* Username */} -->
+                  <div class="insideMain-Div">
+                      <label class="fnt-family-sans">Username</label>
+                      <input class="login-input fnt-family-sans" ngModel name="username" placeholder="" />
+                  </div>
+                  <!-- {/* password */} -->
+                  <div class="insideMain-Div fnt-family-sans">
+                      <label>Password</label>
+                      <input class="login-input fnt-family-sans" ngModel name="password" placeholder="" type="password" />
+                  </div>
+                  <!-- {/* checkbox */} -->
+                  <div class="checkbox-mainDiv">
+                      <label class="red-checkbox-container fnt-family-sans">Remember
+                          <input type="checkbox" />
+                          <span class="checkmark"></span>
+                      </label>
+                  </div>
+                  <!-- {/* buttons */} -->
+                  <div class="buttons fnt-family-sans">
+                      <Button class="loginButton buttonColor btn-red fnt-family-sans">Login</Button>
+                  </div>
+                  <!-- {/* forgot Password */} -->
+                  <div class="forgotten-Password fnt-family-sans">
+                      <h6>Forgot Password?</h6>
+                  </div>
+              </div>
+          </form>
+      </div>
+  </div>
+</div>
