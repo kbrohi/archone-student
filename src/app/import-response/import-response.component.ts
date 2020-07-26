@@ -7,11 +7,14 @@ import { Router } from "@angular/router";
 
 export class ImportResponseComponent implements OnInit {
   newusers = []
+  alreadyExist=false
   @Input() users
   constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.newusers = this.users
+    console.log(this.newusers)
+    
   }
   //close the popup
   close() {

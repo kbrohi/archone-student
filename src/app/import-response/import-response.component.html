@@ -16,13 +16,15 @@
             <div
                 class="messageSection-MainDiv">
                 <!-- heading -->
-                <div class="heading-of-studentData fnt-family-sans">
-                    <h6>Students data already exist.</h6>
-                </div>
-                <div class="list-of-data-mainDiv">
-                    <ul>
-                        <li *ngFor="let user of newusers" class="fnt-family-sans">{{user}}</li>
-                    </ul>
+                <div *ngIf="newusers[0]!==''">
+                    <div class="heading-of-studentData fnt-family-sans">
+                        <h6>Students data already exist.</h6>
+                    </div>
+                    <div class="list-of-data-mainDiv">
+                        <ul>
+                            <li *ngFor="let user of newusers" class="fnt-family-sans">{{user}}</li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- buttons -->
                 <div class="importedButton-MainDiv">

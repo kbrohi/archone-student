@@ -4,13 +4,31 @@ import { Router } from "@angular/router";
   selector: 'app-header',
   templateUrl: './header.component.html'
 })
-export class HeaderComponent implements OnInit {
 
+export class HeaderComponent implements OnInit {
+  logoutButton = true
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+    if(window.location.pathname==='/login')
+    {
+      this.logoutButton=false
+    }
+    else{
+      this.logoutButton=true
+    }
+   
   }
-  logout(){
+  ngDoCheck(){
+    if(window.location.pathname==='/login')
+    {
+      this.logoutButton=false
+    }
+    else{
+      this.logoutButton=true
+    }
+  }
+  logout() {
     localStorage.clear()
     this.router.navigateByUrl('login')
     // window.location.href='http://localhost:4200/login'

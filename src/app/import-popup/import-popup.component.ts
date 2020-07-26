@@ -1,6 +1,8 @@
 import { ApisService } from './../services/apis.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
+import axios from "axios"
+import { apiUrl } from '../../config/config.json';
 @Component({
   selector: 'app-import-popup',
   templateUrl: './import-popup.component.html',
@@ -53,15 +55,40 @@ export class ImportPopupComponent implements OnInit {
   }
   //push the previous school to record and call the endpoint for update
   import() {
-    this.studentsRecord = this.studentsRecord.map((single) => {
+    if (this.previousSchool === "") {
+      let r = confirm("Are you sure you want to continue without School");
+      if (r == true) {
+        axios.post(apiUrl + '/student', {
+          students: this.studentsRecord
+        }, {
+          headers: {
+            "Content-Type": "application/json"
+          }
+        }).then(res=>{
+          this.notInserted = res.data.error;
+          this.notInserted = this.notInserted.split(',')
+          this.popup = 'yes'
+        })
+      }
+    }
+    else {
+      this.studentsRecord = this.studentsRecord.map((single) => {
       single.previousSchool = this.previousSchool;
       single.currentSchool = "School X"
       return single;
     })
-    this.apisService.importSchoolData(this.studentsRecord).then(res => {
+    axios.post(apiUrl + '/student', {
+      students: this.studentsRecord
+    }, {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }).then(res=>{
       this.notInserted = res.data.error;
       this.notInserted = this.notInserted.split(',')
       this.popup = 'yes'
     })
+    }
+   
   }
 }

@@ -38,7 +38,7 @@
                         </div>
                     </div>
                     <div class="buttons">
-                        <button class="popup-button btn-red fnt-family-sans" (click)='import()'>Import</button>
+                        <button class="popup-button btn-red fnt-family-sans" [disabled]="studentsRecord.length<1 ? 'disabled': null" (click)='import()'>Import</button>
                     </div>
                 </div>
             </form>

@@ -41,11 +41,11 @@
             </div>
         </div>
         <!-- {/* no data message displayed */} -->
-        <!-- <div class="message-when-no-records fnt-family-sans">
+        <div *ngIf="noRecordFound" class="message-when-no-records fnt-family-sans">
                                             <h6>No record found.</h6>
-                                        </div> -->
+                                        </div>
         <!-- {/* table section starts from here */} -->
-            <div
+            <div *ngIf="!noRecordFound"
             class="tableBody"> <!-- {/* header of data */} -->
             <div class="header-ImgAndHeading header-of-data-red-color">
                 <ul class="width-full-100">

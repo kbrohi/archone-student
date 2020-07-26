@@ -14,6 +14,7 @@ export class DashboardComponent implements OnInit {
   editRecord
   students = []
   editStudentId = ''
+  noRecordFound=false
   CancelToken = axios.CancelToken;
   cancel
   constructor(private router: Router, private apisService: ApisService, private store: Store) {
@@ -30,7 +31,13 @@ export class DashboardComponent implements OnInit {
         "Content-Type": "application/json"
       }
     }).then(res => {
-      this.records = res.data.data
+      
+        this.records = res.data.data 
+      if(this.records.length<1){
+        this.noRecordFound=true
+      }
+     
+      
     })
   }
   //navigate to import page
